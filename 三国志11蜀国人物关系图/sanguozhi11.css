@@ -1,0 +1,58 @@
+/* Copyright 2014 Tianchuang & Sunchao */
+
+.nodetext {
+    font-size: 14px ;
+    font-family: Arial;
+    font-weight:bold;
+    fill:#336633;
+}
+/* 墨绿色代表蜀国势力 */
+
+
+.nodetext1 {
+    font-size: 14px ;
+    font-family: Arial;
+    font-weight:bold;
+    fill:#0000FF;
+}
+/* 蓝色色代表魏国势力 */
+
+
+.nodetext2 {
+    font-size: 14px ;
+    font-family: Arial;
+    font-weight:bold;
+    fill:#FF0033;
+}
+/* 红色代表吴国势力 */
+
+
+.nodetext3 {
+    font-size: 14px ;
+    font-family: Arial;
+    font-weight:bold;
+    fill:#666666;
+}
+/* 灰色代表其他国势力 */
+
+
+.nodetext4 {
+    font-size: 12px ;
+    font-family: Arial;
+    fill:#0000FF;
+    fill-opacity:0.0;
+}
+/* 这是 字 */
+
+
+.linetext {
+    font-size: 12px ;
+    font-family:  Arial;
+    fill:#000000;
+    font-weight:bold;
+
+    fill-opacity:0.0;
+}
+
+
+/* 这是 关系 */

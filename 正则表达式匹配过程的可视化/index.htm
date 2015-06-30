@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html><head>
+ <meta charset="utf-8">
+ <meta name="author" content="Sun Sibai & Liu Yu & Tian Chuang">
+ <meta name="keywords" content="regex visualize finite automaton">
+ <link rel="stylesheet" type="text/css" href="css/main.css">
+ <link rel="license" href="Apache License 2.0">
+ <link rel="icon" href="res/icon.png">
+ <title>Regex Viewer --- View Regular Expressions in Graph to Easily Understand the Matching Process.</title>
+</head><body onkeypress="javascript:KeySet.keypress(event);" onclick="javascript:MouseSet.onclick(event);">
+ <div class="wrapper"><p class="center" style="width:1024px;text-align:left;line-height:1pt;padding:0;"><b>RegexViewer</b></p><p class="center" style="width:1024px;text-align:right;line-height:1pt;padding:0 0 10px 0;">@author <i>Liu Yu</i> &amp; <i>Sun Sibai</i> &amp; <i>Tian Chuang</i> &amp; <i>Zhuo Junbao</i> &amp; <i>Zhuo Aonan</i> </p></div>
+ <div class="wrapper"><p class="center" style="width:1024px;text-align:center;line-height:15pt;padding:5;">
+Press <b>Enter</b> or <b>-&gt;</b> to Step Forward.
+ </p></div>
+<div class="wrapper">
+ <div class="left wrapper"><form class="center" style="text-align:center;" onclick="javascript:Context.refresh();">
+  Pattern (RegExp) = <input type="text" id="ptnTxtEdt" value="" onkeydown="javascript:if (event.keyCode==13) {this.select();Context.ParsePro.init(this.value);this.blur();}"/>
+  <input type="button" value="Build Nodes" onclick="javascript:Context.ParsePro.init(document.getElementById('ptnTxtEdt').value);"/><br/><br/>
+  Content (String) = <input type="text" id="strTxtEdt" value="" onkeydown="javascript:if (event.keyCode==13) {this.select();Context.MatchPro.init(this.value);this.blur();}"/>
+  <input type="button" value="Check Match" onclick="javascript:Context.MatchPro.init(document.getElementById('strTxtEdt').value);"/><br/>
+  <br/>Parsing Method<br/>
+  <input type="radio" class="radio" name="parse" value="SWparser" checked="checked" onkeydown="javascript:this.blur();">Direct Parse</input><br/>
+  <input type="radio" class="radio" name="parse" value="LYparser" onkeydown="javascript:this.blur();">Grammar Tree</input><br/>
+  <br/>Graph Type<br/>
+  <input type="radio" class="radio" name="graph" value="ENFA" checked="checked" onkeydown="javascript:this.blur();">ϵ-NFA Graph</input><br/>
+  <input type="radio" class="radio" name="graph" value="NFA" onkeydown="javascript:this.blur();"> NFA Graph </input><br/>
+  <input type="radio" class="radio" name="graph" value="DFA" onkeydown="javascript:this.blur();"> DFA Graph </input><br/>
+  <br/>Matcher Style<br/>
+  <input type="radio" class="radio" name="match" value="SWmatcher" checked="checked" onkeydown="javascript:this.blur();">Parallel</input><br/>
+  <input type="radio" class="radio" name="match" value="LYmatcher" onkeydown="javascript:this.blur();">Cascade</input><br/>
+  <br/>Match Strategy<br/>
+  <div class="left" style="margin-bottom:20px;">
+   * start <br/>
+   <input type="radio" class="radio" name="stgstart" value="all" onkeydown="javascript:this.blur();">all</input><br/>
+   <input type="radio" class="radio" name="stgstart" value="last" checked="checked" onkeydown="javascript:this.blur();">last</input><br/>
+   <input type="radio" class="radio" name="stgstart" value="first" onkeydown="javascript:this.blur();">first</input><br/>
+   <input type="radio" class="radio" name="stgstart" value="strict" onkeydown="javascript:this.blur();">strict</input><br/>
+  </div><div class="right" style="margin-bottom:20px;">
+   final * <br/>
+   <input type="radio" class="radio" name="stgfinal" value="all" onkeydown="javascript:this.blur();">all</input><br/>
+   <input type="radio" class="radio" name="stgfinal" value="last" onkeydown="javascript:this.blur();">last</input><br/>
+   <input type="radio" class="radio" name="stgfinal" value="first" checked="checked" onkeydown="javascript:this.blur();">first</input><br/>
+   <input type="radio" class="radio" name="stgfinal" value="strict" onkeydown="javascript:this.blur();">strict</input><br/>
+  </div>
+  <br/>Navigation<br/>
+  <input type="radio" class="radio" name="navi" value="man" checked="checked" onkeydown="javascript:this.blur();"> Manual </input><br/>
+  <input type="radio" class="radio" name="navi" value="aut" onkeydown="javascript:this.blur();">Auto Trace</input><br/>
+  <input type="radio" class="radio" name="navi" value="run" onkeydown="javascript:this.blur();"> Run Fast </input><br/>
+  <br/>
+ </form></div>
+ <div class="right wrapper"><span class="center" style="text-align:center;">
+  Result RegEx : <div id="regexResult"></div> <br/>
+  Result Match : <div id="matchResult"></div> <br/>
+  Now Dealing : <div id="currentPos"></div> <br/>
+  Differ Graph : <div id="difMessage"></div> <br/>
+ </span></div>
+ <div class="center wrapper" id="canvas"></div>
+</div>
+ <!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
+ <script src="lib/hashtable.min.js"></script>
+ <script src="lib/hashset.min.js"></script>
+ <script src="lib/jison.min.js"></script>
+ <script src="lib/d3.min.js"></script>
+ <script src="js/kernel/utils.js"></script>
+ <script src="js/kernel/parser.js"></script>
+ <script src="js/kernel/fa.js"></script>
+ <script src="js/kernel/swnodes.js"></script>
+ <script src="js/kernel/swgraph.js"></script>
+ <script src="js/kernel/swparse.js"></script>
+ <script src="js/kernel/swmatch.js"></script>
+ <script src="js/ui/swconst.js"></script>
+ <script src="js/model/swmodel.js"></script>
+ <script src="js/model/swfmswitch.js"></script>
+ <script src="js/model/swtransfer.js"></script>
+ <script src="js/model/swparser.js"></script>
+ <script src="js/model/lyparser.js"></script>
+ <script src="js/model/swmatcher.js"></script>
+ <script src="js/model/lymatcher.js"></script>
+ <script src="js/control/swinput.js"></script>
+ <script src="js/view/swdraw.js"></script>
+ <script src="js/control/swparserun.js"></script>
+ <script src="js/control/swmatchrun.js"></script>
+ <script src="js/control/swrefresh.js"></script>
+ <script src="js/ui/swkeys.js"></script>
+ <script src="js/ui/swmouse.js"></script>
+ <script src="js/ui/swui.js"></script>
+<div class="center wrapper"><p class="center" style="width:1024px;text-align:center;line-height:15pt;padding:5;">
+  This project uses
+  <a href="http://d3js.org">d3</a>, Tim Down's hashset, <a href="http://jison.org/">jison</a> and
+  <a href="https://code.google.com/p/jshashtable/">jshashtable</a>.
+</p></div>
+</body></html>

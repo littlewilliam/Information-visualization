@@ -1,0 +1,134 @@
+﻿{
+"nodes":[
+{"id":"0"  , "name": "刘备"   , "style_name":"玄德"  ,  "image" : "image/0liubei.jpg" },
+{"id":"1"  , "name": "关羽"   , "style_name":"云长"  ,  "image" : "image/1guanyu.jpg" },
+{"id":"2"  ,  "name": "张飞"   , "style_name":"翼德"  ,  "image" : "image/2zhangfei.jpg" },
+{"id":"3"  ,  "name": "诸葛亮" , "style_name":"孔明"  ,  "image" : "image/3zhugeliang.jpg" },
+{"id":"4"  ,  "name": "孙尚香" , "style_name":"尚香"  ,  "image" : "image/4sunshangxiang.jpg" },
+{"id":"5"  ,  "name": "刘禅" , "style_name":"公嗣"  ,  "image" : "image/5liushan.jpg" },
+{"id":"6"  ,  "name": "黄皓" , "style_name":"无记载"  ,  "image" : "image/6huanghao.jpg" },
+{"id":"7"  ,  "name": "姜维" , "style_name":"伯约"  ,  "image" : "image/7jiangwei.jpg" },
+{"id":"8"  ,  "name": "夏侯霸" , "style_name":"仲权"  ,  "image" : "image/8xiahouba.jpg" },
+{"id":"9"  ,  "name": "徐庶" , "style_name":"元直"  ,  "image" : "image/9xushu.jpg" },
+{"id":"10"  ,  "name": "周仓" , "style_name":"元福"  ,  "image" : "image/10zhoucang.jpg" },
+{"id":"11"  ,  "name": "廖化" , "style_name":"元俭"  ,  "image" : "image/11liaohua.jpg" },
+{"id":"12"  ,  "name": "关平" , "style_name":"坦之"  ,  "image" : "image/12guanping.jpg" },
+{"id":"13"  ,  "name": "刘封" , "style_name":"公业"  ,  "image" : "image/13liufeng.jpg" },
+{"id":"14"  ,  "name": "黄月英" , "style_name":"婉贞"  ,  "image" : "image/14huangyueying.jpg" },
+{"id":"15"  ,  "name": "马良" , "style_name":"季常"  ,  "image" : "image/15maliang.jpg" },
+{"id":"16"  ,  "name": "马谡" , "style_name":"幼常"  ,  "image" : "image/16masu.jpg" },
+{"id":"17"  ,  "name": "魏延" , "style_name":"文长"  ,  "image" : "image/17weiyan.jpg" },
+{"id":"18"  ,  "name": "杨仪" , "style_name":"威公"  ,  "image" : "image/18yangyi.jpg" },
+{"id":"19"  ,  "name": "赵云" , "style_name":"子龙"  ,  "image" : "image/19zhaoyun.jpg" },
+{"id":"20"  ,  "name": "马云騄" , "style_name":"云騄"  ,  "image" : "image/20mayunlu.jpg" },
+{"id":"21"  ,  "name": "马超" , "style_name":"孟起"  ,  "image" : "image/21machao.jpg" },
+{"id":"22"  ,  "name": "糜氏" , "style_name":"无记载"  ,  "image" : "image/22mishi.jpg" },
+{"id":"23"  ,  "name": "糜芳" , "style_name":"子方"  ,  "image" : "image/23mifang.jpg" },
+{"id":"24"  ,  "name": "糜竺" , "style_name":"子仲"  ,  "image" : "image/24mizhu.jpg" },
+{"id":"25"  ,  "name": "关兴" , "style_name":"安国"  ,  "image" : "image/25guangxing.jpg" },
+{"id":"26"  ,  "name": "张苞" , "style_name":"兴国"  ,  "image" : "image/26zhangbao.jpg" },
+{"id":"27"  ,  "name": "孟达" , "style_name":"子度"  ,  "image" : "image/27mengda.jpg" },
+{"id":"28"  ,  "name": "法正" , "style_name":"孝直"  ,  "image" : "image/28fazheng.jpg" },
+{"id":"29"  ,  "name": "黄忠" , "style_name":"汉升"  ,  "image" : "image/29huangzhong.jpg" },
+{"id":"30"  ,  "name": "庞统" , "style_name":"士元"  ,  "image" : "image/30pangtong.jpg" },
+
+
+    {"id":"50"  ,  "name": "曹操" , "style_name":"孟德"  ,  "image" : "image/50caocao.jpg" },
+    {"id":"51"  ,  "name": "徐晃" , "style_name":"公明"  ,  "image" : "image/51xuhuang.jpg" },
+    {"id":"52"  ,  "name": "张辽" , "style_name":"文远"  ,  "image" : "image/52zhangliao.jpg" },
+
+
+    {"id":"60"  ,  "name": "周瑜" , "style_name":"公瑾"  ,  "image" : "image/60zhouyu.jpg" },
+
+
+    {"id":"70"  ,  "name": "吕布" , "style_name":"奉先"  ,  "image" : "image/70lvbu.jpg" },
+    {"id":"71"  ,  "name": "樊氏" , "style_name":"无记载"  ,  "image" : "image/71fanshi.jpg" },
+    {"id":"72"  ,  "name": "马腾" , "style_name":"寿成"  ,  "image" : "image/72mateng.jpg" },
+    {"id":"73"  ,  "name": "董卓" , "style_name":"仲颖"  ,  "image" : "image/73dongzhuo.jpg" },
+    {"id":"74"  ,  "name": "张松" , "style_name":"子乔"  ,  "image" : "image/74zhangsong.jpg" }
+
+
+],
+"edges":[
+{ "source": 0 , "target": 1 , "relation":"义兄弟关系" },
+{ "source": 0 , "target": 2 , "relation":"义兄弟关系" },
+
+{ "source": 1 , "target": 2 , "relation":"义兄弟关系" },
+
+{ "source": 4 , "target": 0 , "relation":"夫妻关系" },
+{ "source": 22 , "target": 0 , "relation":"夫妻关系" },
+{ "source": 3 , "target": 14 , "relation":"夫妻关系" },
+
+
+{ "source": 5, "target": 0 , "relation":"血缘关系" },
+
+{ "source": 13 , "target": 0 , "relation":"血缘关系" },
+{ "source": 15 , "target": 16 , "relation":"血缘关系" },
+{ "source": 21 , "target": 37 , "relation":"血缘关系" },
+{ "source": 22 , "target": 23 , "relation":"血缘关系" },
+{ "source": 23 , "target": 24 , "relation":"血缘关系" },
+{ "source": 24 , "target": 22 , "relation":"血缘关系" },
+{ "source": 1, "target": 12 , "relation":"血缘关系" },
+{ "source": 1 , "target": 25 , "relation":"血缘关系" },
+{ "source": 2 , "target": 26 , "relation":"血缘关系" },
+
+
+{ "source": 0 , "target": 3 , "relation":"亲爱关系" },
+{ "source": 0 , "target": 9 , "relation":"亲爱关系" },
+{ "source": 0 , "target": 19 , "relation":"亲爱关系" },
+
+{ "source": 14 , "target": 3 , "relation":"亲爱关系" },
+{ "source": 19 , "target": 3 , "relation":"亲爱关系" },
+{ "source": 15 , "target": 3 , "relation":"亲爱关系" },
+{ "source": 16, "target": 3 , "relation":"亲爱关系" },
+{ "source": 18 , "target": 3 , "relation":"亲爱关系" },
+
+{ "source": 19 , "target": 36 , "relation":"亲爱关系" },
+{ "source": 19 , "target": 20 , "relation":"亲爱关系" },
+
+{ "source": 21 , "target": 20 , "relation":"亲爱关系" },
+{ "source": 37 , "target": 20 , "relation":"亲爱关系" },
+{ "source": 37 , "target": 21 , "relation":"亲爱关系" },
+
+{ "source": 1 , "target": 32 , "relation":"亲爱关系" },
+{ "source": 1 , "target": 33 , "relation":"亲爱关系" },
+{ "source": 1 , "target": 10 , "relation":"亲爱关系" },
+{ "source": 1 , "target": 11 , "relation":"亲爱关系" },
+
+{ "source": 10 , "target": 11 , "relation":"亲爱关系" },
+{ "source": 12 , "target": 11 , "relation":"亲爱关系" },
+{ "source": 12 , "target": 10 , "relation":"亲爱关系" },
+{ "source": 12 , "target": 13 , "relation":"亲爱关系" },
+
+{ "source": 25 , "target": 26 , "relation":"亲爱关系" },
+{ "source": 2 , "target": 29 , "relation":"亲爱关系" },
+{ "source": 2 , "target": 30 , "relation":"亲爱关系" },
+{ "source": 29 , "target": 28 , "relation":"亲爱关系" },
+{ "source": 28 , "target": 27 , "relation":"亲爱关系" },
+{ "source": 28 , "target": 39 , "relation":"亲爱关系" },
+{ "source": 27 , "target": 39 , "relation":"亲爱关系" },
+
+{ "source": 5 , "target": 6 , "relation":"亲爱关系" },
+{ "source": 7 , "target": 8 , "relation":"亲爱关系" },
+
+
+{ "source": 6 , "target": 7 , "relation":"厌恶关系" },
+{ "source": 35 , "target": 2 , "relation":"厌恶关系" },
+{ "source": 38 , "target": 2 , "relation":"厌恶关系" },
+{ "source": 31 , "target": 2 , "relation":"厌恶关系" },
+{ "source": 35 , "target": 1 , "relation":"厌恶关系" },
+{ "source": 38 , "target": 1 , "relation":"厌恶关系" },
+{ "source": 23 , "target": 1 , "relation":"厌恶关系" },
+
+{ "source": 31 , "target": 20 , "relation":"厌恶关系" },
+{ "source": 31 , "target": 21 , "relation":"厌恶关系" },
+{ "source": 31 , "target": 37 , "relation":"厌恶关系" },
+
+{ "source": 13 , "target": 27 , "relation":"厌恶关系" },
+{ "source": 34 , "target": 3 , "relation":"厌恶关系" },
+{ "source": 17 , "target": 3 , "relation":"厌恶关系" },
+{ "source": 17 , "target": 18 , "relation":"厌恶关系" }
+
+
+]
+}
